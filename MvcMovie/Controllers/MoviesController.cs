@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Mvc.Html;
 using MvcMovie.Models;
 
 namespace MvcMovie.Controllers
@@ -23,7 +24,7 @@ namespace MvcMovie.Controllers
                            orderby d.Genre
                            select d.Genre;
 
-            GenreLst.AddRange(GenreQry);
+            GenreLst.AddRange(GenreQry.Distinct());
 
             ViewBag.movieGenre = new SelectList(GenreLst);
             
@@ -69,7 +70,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -101,7 +102,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
