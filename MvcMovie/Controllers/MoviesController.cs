@@ -128,6 +128,9 @@ namespace MvcMovie.Controllers
             return View(movie);
         }
 
+        // This Delete Post method is named DeleteConfirmed because it have the same parameter as the Delete Get method has. 
+        // Scaffholding add a new action name to the method, so the routing could find this method. 
+        // Another way would be to add unused parameter to the method, like FormCollection fcNotUsed.
         // POST: Movies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

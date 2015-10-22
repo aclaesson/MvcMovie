@@ -174,9 +174,9 @@
     <Compile Include="Migrations\201510201137374_Rating.Designer.cs">
       <DependentUpon>201510201137374_Rating.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510210507005_Test.cs" />
-    <Compile Include="Migrations\201510210507005_Test.Designer.cs">
-      <DependentUpon>201510210507005_Test.cs</DependentUpon>
+    <Compile Include="Migrations\201510211112549_DataAnnotations.cs" />
+    <Compile Include="Migrations\201510211112549_DataAnnotations.Designer.cs">
+      <DependentUpon>201510211112549_DataAnnotations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -218,7 +218,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -278,8 +280,8 @@
     <EmbeddedResource Include="Migrations\201510201137374_Rating.resx">
       <DependentUpon>201510201137374_Rating.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510210507005_Test.resx">
-      <DependentUpon>201510210507005_Test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510211112549_DataAnnotations.resx">
+      <DependentUpon>201510211112549_DataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
